@@ -1,4 +1,4 @@
-// Commit from astha463
+
 import './App.css'
 import React, { Suspense, lazy, useState, useEffect } from "react";
 import { BrowserRouter as Router, Route, Routes, Navigate } from 'react-router-dom'
