@@ -1,0 +1,116 @@
+/* ASL to Text Page Styling - Simplified Launcher (Matching SignToText.css) */
+
+:root {
+  --asl-primary: #6366F1;
+  --asl-secondary: #764BA2;
+  --asl-gradient: linear-gradient(135deg, #667EEA 0%, #764BA2 100%);
+}
+
+/* Page Container */
+.sign-to-text-page {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 2rem 0 4rem;
+  position: relative;
+}
+
+[data-theme='dark'] .sign-to-text-page {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+.sign-to-text-page::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 300px;
+  background: radial-gradient(circle at 50% 0%, rgba(102, 126, 234, 0.1), transparent);
+  pointer-events: none;
+}
+
+/* Page Header */
+.page-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  position: relative;
+  z-index: 1;
+}
+
+.header-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1.25rem;
+  background: var(--asl-gradient);
+  color: white;
+  border-radius: 2rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.3);
+  transition: all 0.3s ease;
+}
+
+.header-badge:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(99, 102, 241, 0.4);
+}
+
+[data-theme='dark'] .header-badge {
+  background: var(--asl-gradient);
+  box-shadow: 0 4px 12px rgba(99, 102, 241, 0.5);
+}
+
+.page-title {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 1rem;
+  color: #1e293b;
+  line-height: 1.2;
+}
+
+.title-gradient {
+  background: var(--asl-gradient);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  display: inline-block;
+}
+
+.page-description {
+  font-size: 1.125rem;
+  color: #64748b;
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+[data-theme='dark'] .page-title {
+  color: #f1f5f9;
+}
+
+[data-theme='dark'] .page-description {
+  color: #94a3b8;
+}
+
+/* Container */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+@media (max-width: 768px) {
+  .page-title {
+    font-size: 2rem;
+  }
+  
+  .page-description {
+    font-size: 1rem;
+  }
+  
+  .container {
+    padding: 0 1rem;
+  }
+}
